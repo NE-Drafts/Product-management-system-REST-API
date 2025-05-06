@@ -22,7 +22,6 @@
     "swagger"
   ],
   "dependencies": {
-    "@faker-js/faker": "^8.0.0",
     "@prisma/client": "^5.0.0",
     "axios": "^1.2.2",
     "bcrypt": "^5.1.1",

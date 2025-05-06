@@ -12,7 +12,10 @@ import {
 export async function listUserHandler(req: Request, res: Response, next: NextFunction) {
   try {
     const users = await getUsers();
-    console.log(`Current Users: ${users}`)
+    
+      // console.log(`Current Users: ${users}`)
+      console.log("Current Users:", JSON.stringify(users, null));
+
     return res.status(200).json({users});
   } catch (error) {
     return next(error);

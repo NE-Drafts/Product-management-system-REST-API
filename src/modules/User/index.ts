@@ -1,12 +1,12 @@
 import { Router } from 'express';
 
-// import {
-//   createUserHandler,
-//   deleteUserHandler,
-//   getUserHandler,
-//   listUserHandler,
-//   updateUserHandler,
-// } from './user.controller';
+import {
+  createUserHandler,
+  deleteUserHandler,
+  getUserHandler,
+  listUserHandler,
+  updateUserHandler,
+} from './user.controller';
 // import { isAuthenticated } from '../auth/auth.services';
 
 const router = Router();
@@ -33,8 +33,8 @@ const router = Router();
  *      500:
  *        description: Server error
  */
-// router.get('/', isAuthenticated, listUserHandler);
-// router.delete('/:id', isAuthenticated, deleteUserHandler);
+router.get('/', listUserHandler);
+router.delete('/:id', deleteUserHandler);
 
 /**
  * @openapi
@@ -58,8 +58,8 @@ const router = Router();
  *      500:
  *        description: Server error
  */
-// router.get('/:id', isAuthenticated, getUserHandler);
-// router.patch('/:id', isAuthenticated, updateUserHandler);
+router.get('/:id', getUserHandler);
+router.patch('/:id', updateUserHandler);
 
 /**
  * @openapi
@@ -88,6 +88,6 @@ const router = Router();
  *      500:
  *        description: Server error
  */
-// router.post('/', createUserHandler);
+router.post('/', createUserHandler);
 
 export default router;

@@ -13,6 +13,6 @@ const router = Router();
  *    200:
  *      description: App is up and running
  */
-router.get('/', (req: Request, res: Response) => res.json({"message": "Healthy server"}).sendStatus(200));
+router.get('/', (req: Request, res: Response) => res.send({"message":"Success the server is healthy"}).status(200));
 
 export default router;

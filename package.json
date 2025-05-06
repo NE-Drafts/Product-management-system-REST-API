@@ -10,7 +10,7 @@
     "lint": "eslint . --ext .ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
-    "prisma:deploy": "prisma migrate deploy",
+    "prisma:studio": "prisma studio",
     "seed": "ts-node-dev src/seed.ts"
   },
   "keywords": [
@@ -23,7 +23,7 @@
   ],
   "dependencies": {
     "@faker-js/faker": "^8.0.0",
-    "@prisma/client": "^6.7.0",
+    "@prisma/client": "^5.0.0",
     "axios": "^1.2.2",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",

@@ -1,9 +1,19 @@
-// import { cors } from "@cors"
-// import { express } from "express"
+/* eslint-disable import/first */
+import * as dotenv from 'dotenv';
 
-const app = new express()
+dotenv.config();
 
-app.listen()
+import { server } from './app';
+import log from './logger';
 
+function startServer() {
+  const PORT = process.env.PORT as string || 8080;
+  server.listen(PORT, () => {
+      console.log("hello mate")
+      log.info(`Server running 🤖🚀 at http://localhost:${PORT}`);
+  });
+}
 
-export default app;
+setImmediate(startServer);
+
+export default server;

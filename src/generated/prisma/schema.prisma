@@ -18,27 +18,29 @@ datasource db {
 // learn more about it in the docs: https://pris.ly/d/prisma-schema
 
 model User {
-  id        String    @id @default(uuid())
-  email     String    @unique
-  name      String?
-  password  String
-  createdAt DateTime  @default(now()) @map("created_at")
-  updatedAt DateTime  @updatedAt @map("updated_at")
-  products  Product[]
+  id              String    @id @default(uuid())
+  email           String    @unique
+  firstName       String?
+  lastName        String?
+  password        String
+  profileImageUrl String?   @map("User_profile_url")
+  createdAt       DateTime  @default(now()) @map("created_at")
+  updatedAt       DateTime  @updatedAt @map("updated_at")
+  products        Product[]
 
   @@map("users")
 }
 
 model Product {
-  id          String   @id @default(uuid())
-  name        String
-  description String?
-  price       Float
-  imageUrl    String?  @map("image_url")
-  createdAt   DateTime @default(now()) @map("created_at")
-  updatedAt   DateTime @updatedAt @map("updated_at")
-  userId      String   @map("user_id")
-  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  id             String   @id @default(uuid())
+  name           String
+  description    String?
+  price          Float
+  prductImageUrl String?  @map("Product_image_url")
+  createdAt      DateTime @default(now()) @map("created_at")
+  updatedAt      DateTime @updatedAt @map("updated_at")
+  userId         String   @map("user_id")
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("products")
 }

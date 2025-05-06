@@ -995,8 +995,10 @@ export namespace Prisma {
   export type UserMinAggregateOutputType = {
     id: string | null
     email: string | null
-    name: string | null
+    firstName: string | null
+    lastName: string | null
     password: string | null
+    profileImageUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1004,8 +1006,10 @@ export namespace Prisma {
   export type UserMaxAggregateOutputType = {
     id: string | null
     email: string | null
-    name: string | null
+    firstName: string | null
+    lastName: string | null
     password: string | null
+    profileImageUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
   }
@@ -1013,8 +1017,10 @@ export namespace Prisma {
   export type UserCountAggregateOutputType = {
     id: number
     email: number
-    name: number
+    firstName: number
+    lastName: number
     password: number
+    profileImageUrl: number
     createdAt: number
     updatedAt: number
     _all: number
@@ -1024,8 +1030,10 @@ export namespace Prisma {
   export type UserMinAggregateInputType = {
     id?: true
     email?: true
-    name?: true
+    firstName?: true
+    lastName?: true
     password?: true
+    profileImageUrl?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1033,8 +1041,10 @@ export namespace Prisma {
   export type UserMaxAggregateInputType = {
     id?: true
     email?: true
-    name?: true
+    firstName?: true
+    lastName?: true
     password?: true
+    profileImageUrl?: true
     createdAt?: true
     updatedAt?: true
   }
@@ -1042,8 +1052,10 @@ export namespace Prisma {
   export type UserCountAggregateInputType = {
     id?: true
     email?: true
-    name?: true
+    firstName?: true
+    lastName?: true
     password?: true
+    profileImageUrl?: true
     createdAt?: true
     updatedAt?: true
     _all?: true
@@ -1124,8 +1136,10 @@ export namespace Prisma {
   export type UserGroupByOutputType = {
     id: string
     email: string
-    name: string | null
+    firstName: string | null
+    lastName: string | null
     password: string
+    profileImageUrl: string | null
     createdAt: Date
     updatedAt: Date
     _count: UserCountAggregateOutputType | null
@@ -1150,8 +1164,10 @@ export namespace Prisma {
   export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
-    name?: boolean
+    firstName?: boolean
+    lastName?: boolean
     password?: boolean
+    profileImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     products?: boolean | User$productsArgs<ExtArgs>
@@ -1161,8 +1177,10 @@ export namespace Prisma {
   export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     email?: boolean
-    name?: boolean
+    firstName?: boolean
+    lastName?: boolean
     password?: boolean
+    profileImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }, ExtArgs["result"]["user"]>
@@ -1171,13 +1189,15 @@ export namespace Prisma {
   export type UserSelectScalar = {
     id?: boolean
     email?: boolean
-    name?: boolean
+    firstName?: boolean
+    lastName?: boolean
     password?: boolean
+    profileImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "name" | "password" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
+  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "email" | "firstName" | "lastName" | "password" | "profileImageUrl" | "createdAt" | "updatedAt", ExtArgs["result"]["user"]>
   export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     products?: boolean | User$productsArgs<ExtArgs>
     _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
@@ -1192,8 +1212,10 @@ export namespace Prisma {
     scalars: $Extensions.GetPayloadResult<{
       id: string
       email: string
-      name: string | null
+      firstName: string | null
+      lastName: string | null
       password: string
+      profileImageUrl: string | null
       createdAt: Date
       updatedAt: Date
     }, ExtArgs["result"]["user"]>
@@ -1592,8 +1614,10 @@ export namespace Prisma {
   interface UserFieldRefs {
     readonly id: FieldRef<"User", 'String'>
     readonly email: FieldRef<"User", 'String'>
-    readonly name: FieldRef<"User", 'String'>
+    readonly firstName: FieldRef<"User", 'String'>
+    readonly lastName: FieldRef<"User", 'String'>
     readonly password: FieldRef<"User", 'String'>
+    readonly profileImageUrl: FieldRef<"User", 'String'>
     readonly createdAt: FieldRef<"User", 'DateTime'>
     readonly updatedAt: FieldRef<"User", 'DateTime'>
   }
@@ -2017,7 +2041,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     price: number | null
-    imageUrl: string | null
+    prductImageUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
     userId: string | null
@@ -2028,7 +2052,7 @@ export namespace Prisma {
     name: string | null
     description: string | null
     price: number | null
-    imageUrl: string | null
+    prductImageUrl: string | null
     createdAt: Date | null
     updatedAt: Date | null
     userId: string | null
@@ -2039,7 +2063,7 @@ export namespace Prisma {
     name: number
     description: number
     price: number
-    imageUrl: number
+    prductImageUrl: number
     createdAt: number
     updatedAt: number
     userId: number
@@ -2060,7 +2084,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
-    imageUrl?: true
+    prductImageUrl?: true
     createdAt?: true
     updatedAt?: true
     userId?: true
@@ -2071,7 +2095,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
-    imageUrl?: true
+    prductImageUrl?: true
     createdAt?: true
     updatedAt?: true
     userId?: true
@@ -2082,7 +2106,7 @@ export namespace Prisma {
     name?: true
     description?: true
     price?: true
-    imageUrl?: true
+    prductImageUrl?: true
     createdAt?: true
     updatedAt?: true
     userId?: true
@@ -2180,7 +2204,7 @@ export namespace Prisma {
     name: string
     description: string | null
     price: number
-    imageUrl: string | null
+    prductImageUrl: string | null
     createdAt: Date
     updatedAt: Date
     userId: string
@@ -2210,7 +2234,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
-    imageUrl?: boolean
+    prductImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     userId?: boolean
@@ -2222,7 +2246,7 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
-    imageUrl?: boolean
+    prductImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     userId?: boolean
@@ -2235,13 +2259,13 @@ export namespace Prisma {
     name?: boolean
     description?: boolean
     price?: boolean
-    imageUrl?: boolean
+    prductImageUrl?: boolean
     createdAt?: boolean
     updatedAt?: boolean
     userId?: boolean
   }
 
-  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "price" | "imageUrl" | "createdAt" | "updatedAt" | "userId", ExtArgs["result"]["product"]>
+  export type ProductOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name" | "description" | "price" | "prductImageUrl" | "createdAt" | "updatedAt" | "userId", ExtArgs["result"]["product"]>
   export type ProductInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     user?: boolean | UserDefaultArgs<ExtArgs>
   }
@@ -2259,7 +2283,7 @@ export namespace Prisma {
       name: string
       description: string | null
       price: number
-      imageUrl: string | null
+      prductImageUrl: string | null
       createdAt: Date
       updatedAt: Date
       userId: string
@@ -2661,7 +2685,7 @@ export namespace Prisma {
     readonly name: FieldRef<"Product", 'String'>
     readonly description: FieldRef<"Product", 'String'>
     readonly price: FieldRef<"Product", 'Float'>
-    readonly imageUrl: FieldRef<"Product", 'String'>
+    readonly prductImageUrl: FieldRef<"Product", 'String'>
     readonly createdAt: FieldRef<"Product", 'DateTime'>
     readonly updatedAt: FieldRef<"Product", 'DateTime'>
     readonly userId: FieldRef<"Product", 'String'>
@@ -3058,8 +3082,10 @@ export namespace Prisma {
   export const UserScalarFieldEnum: {
     id: 'id',
     email: 'email',
-    name: 'name',
+    firstName: 'firstName',
+    lastName: 'lastName',
     password: 'password',
+    profileImageUrl: 'profileImageUrl',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt'
   };
@@ -3072,7 +3098,7 @@ export namespace Prisma {
     name: 'name',
     description: 'description',
     price: 'price',
-    imageUrl: 'imageUrl',
+    prductImageUrl: 'prductImageUrl',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     userId: 'userId'
@@ -3175,8 +3201,10 @@ export namespace Prisma {
     NOT?: UserWhereInput | UserWhereInput[]
     id?: StringFilter<"User"> | string
     email?: StringFilter<"User"> | string
-    name?: StringNullableFilter<"User"> | string | null
+    firstName?: StringNullableFilter<"User"> | string | null
+    lastName?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
+    profileImageUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     products?: ProductListRelationFilter
@@ -3185,8 +3213,10 @@ export namespace Prisma {
   export type UserOrderByWithRelationInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
+    firstName?: SortOrderInput | SortOrder
+    lastName?: SortOrderInput | SortOrder
     password?: SortOrder
+    profileImageUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     products?: ProductOrderByRelationAggregateInput
@@ -3198,8 +3228,10 @@ export namespace Prisma {
     AND?: UserWhereInput | UserWhereInput[]
     OR?: UserWhereInput[]
     NOT?: UserWhereInput | UserWhereInput[]
-    name?: StringNullableFilter<"User"> | string | null
+    firstName?: StringNullableFilter<"User"> | string | null
+    lastName?: StringNullableFilter<"User"> | string | null
     password?: StringFilter<"User"> | string
+    profileImageUrl?: StringNullableFilter<"User"> | string | null
     createdAt?: DateTimeFilter<"User"> | Date | string
     updatedAt?: DateTimeFilter<"User"> | Date | string
     products?: ProductListRelationFilter
@@ -3208,8 +3240,10 @@ export namespace Prisma {
   export type UserOrderByWithAggregationInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrderInput | SortOrder
+    firstName?: SortOrderInput | SortOrder
+    lastName?: SortOrderInput | SortOrder
     password?: SortOrder
+    profileImageUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     _count?: UserCountOrderByAggregateInput
@@ -3223,8 +3257,10 @@ export namespace Prisma {
     NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
     id?: StringWithAggregatesFilter<"User"> | string
     email?: StringWithAggregatesFilter<"User"> | string
-    name?: StringNullableWithAggregatesFilter<"User"> | string | null
+    firstName?: StringNullableWithAggregatesFilter<"User"> | string | null
+    lastName?: StringNullableWithAggregatesFilter<"User"> | string | null
     password?: StringWithAggregatesFilter<"User"> | string
+    profileImageUrl?: StringNullableWithAggregatesFilter<"User"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"User"> | Date | string
   }
@@ -3237,7 +3273,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringNullableFilter<"Product"> | string | null
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
+    prductImageUrl?: StringNullableFilter<"Product"> | string | null
     createdAt?: DateTimeFilter<"Product"> | Date | string
     updatedAt?: DateTimeFilter<"Product"> | Date | string
     userId?: StringFilter<"Product"> | string
@@ -3249,7 +3285,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     price?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
+    prductImageUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     userId?: SortOrder
@@ -3264,7 +3300,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringNullableFilter<"Product"> | string | null
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
+    prductImageUrl?: StringNullableFilter<"Product"> | string | null
     createdAt?: DateTimeFilter<"Product"> | Date | string
     updatedAt?: DateTimeFilter<"Product"> | Date | string
     userId?: StringFilter<"Product"> | string
@@ -3276,7 +3312,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrderInput | SortOrder
     price?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
+    prductImageUrl?: SortOrderInput | SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     userId?: SortOrder
@@ -3295,7 +3331,7 @@ export namespace Prisma {
     name?: StringWithAggregatesFilter<"Product"> | string
     description?: StringNullableWithAggregatesFilter<"Product"> | string | null
     price?: FloatWithAggregatesFilter<"Product"> | number
-    imageUrl?: StringNullableWithAggregatesFilter<"Product"> | string | null
+    prductImageUrl?: StringNullableWithAggregatesFilter<"Product"> | string | null
     createdAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
     updatedAt?: DateTimeWithAggregatesFilter<"Product"> | Date | string
     userId?: StringWithAggregatesFilter<"Product"> | string
@@ -3304,8 +3340,10 @@ export namespace Prisma {
   export type UserCreateInput = {
     id?: string
     email: string
-    name?: string | null
+    firstName?: string | null
+    lastName?: string | null
     password: string
+    profileImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     products?: ProductCreateNestedManyWithoutUserInput
@@ -3314,8 +3352,10 @@ export namespace Prisma {
   export type UserUncheckedCreateInput = {
     id?: string
     email: string
-    name?: string | null
+    firstName?: string | null
+    lastName?: string | null
     password: string
+    profileImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     products?: ProductUncheckedCreateNestedManyWithoutUserInput
@@ -3324,8 +3364,10 @@ export namespace Prisma {
   export type UserUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     products?: ProductUpdateManyWithoutUserNestedInput
@@ -3334,8 +3376,10 @@ export namespace Prisma {
   export type UserUncheckedUpdateInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     products?: ProductUncheckedUpdateManyWithoutUserNestedInput
@@ -3344,8 +3388,10 @@ export namespace Prisma {
   export type UserCreateManyInput = {
     id?: string
     email: string
-    name?: string | null
+    firstName?: string | null
+    lastName?: string | null
     password: string
+    profileImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3353,8 +3399,10 @@ export namespace Prisma {
   export type UserUpdateManyMutationInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3362,8 +3410,10 @@ export namespace Prisma {
   export type UserUncheckedUpdateManyInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3373,7 +3423,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     user: UserCreateNestedOneWithoutProductsInput
@@ -3384,7 +3434,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     userId: string
@@ -3395,7 +3445,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     user?: UserUpdateOneRequiredWithoutProductsNestedInput
@@ -3406,7 +3456,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: StringFieldUpdateOperationsInput | string
@@ -3417,7 +3467,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
     userId: string
@@ -3428,7 +3478,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3438,7 +3488,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     userId?: StringFieldUpdateOperationsInput | string
@@ -3503,8 +3553,10 @@ export namespace Prisma {
   export type UserCountOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     password?: SortOrder
+    profileImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3512,8 +3564,10 @@ export namespace Prisma {
   export type UserMaxOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     password?: SortOrder
+    profileImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3521,8 +3575,10 @@ export namespace Prisma {
   export type UserMinOrderByAggregateInput = {
     id?: SortOrder
     email?: SortOrder
-    name?: SortOrder
+    firstName?: SortOrder
+    lastName?: SortOrder
     password?: SortOrder
+    profileImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
   }
@@ -3598,7 +3654,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
-    imageUrl?: SortOrder
+    prductImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     userId?: SortOrder
@@ -3613,7 +3669,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
-    imageUrl?: SortOrder
+    prductImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     userId?: SortOrder
@@ -3624,7 +3680,7 @@ export namespace Prisma {
     name?: SortOrder
     description?: SortOrder
     price?: SortOrder
-    imageUrl?: SortOrder
+    prductImageUrl?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     userId?: SortOrder
@@ -3867,7 +3923,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3877,7 +3933,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3916,7 +3972,7 @@ export namespace Prisma {
     name?: StringFilter<"Product"> | string
     description?: StringNullableFilter<"Product"> | string | null
     price?: FloatFilter<"Product"> | number
-    imageUrl?: StringNullableFilter<"Product"> | string | null
+    prductImageUrl?: StringNullableFilter<"Product"> | string | null
     createdAt?: DateTimeFilter<"Product"> | Date | string
     updatedAt?: DateTimeFilter<"Product"> | Date | string
     userId?: StringFilter<"Product"> | string
@@ -3925,8 +3981,10 @@ export namespace Prisma {
   export type UserCreateWithoutProductsInput = {
     id?: string
     email: string
-    name?: string | null
+    firstName?: string | null
+    lastName?: string | null
     password: string
+    profileImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3934,8 +3992,10 @@ export namespace Prisma {
   export type UserUncheckedCreateWithoutProductsInput = {
     id?: string
     email: string
-    name?: string | null
+    firstName?: string | null
+    lastName?: string | null
     password: string
+    profileImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3959,8 +4019,10 @@ export namespace Prisma {
   export type UserUpdateWithoutProductsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3968,8 +4030,10 @@ export namespace Prisma {
   export type UserUncheckedUpdateWithoutProductsInput = {
     id?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
-    name?: NullableStringFieldUpdateOperationsInput | string | null
+    firstName?: NullableStringFieldUpdateOperationsInput | string | null
+    lastName?: NullableStringFieldUpdateOperationsInput | string | null
     password?: StringFieldUpdateOperationsInput | string
+    profileImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3979,7 +4043,7 @@ export namespace Prisma {
     name: string
     description?: string | null
     price: number
-    imageUrl?: string | null
+    prductImageUrl?: string | null
     createdAt?: Date | string
     updatedAt?: Date | string
   }
@@ -3989,7 +4053,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -3999,7 +4063,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }
@@ -4009,7 +4073,7 @@ export namespace Prisma {
     name?: StringFieldUpdateOperationsInput | string
     description?: NullableStringFieldUpdateOperationsInput | string | null
     price?: FloatFieldUpdateOperationsInput | number
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
+    prductImageUrl?: NullableStringFieldUpdateOperationsInput | string | null
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
   }

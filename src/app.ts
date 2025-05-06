@@ -1,4 +1,33 @@
-import { connectDB } from "./config/db";
+import express from 'express';
+import { createServer } from 'http';
 
+import configExpress from './config/express';
+import { connectDB } from './config/db';
+import swaggerDocs from './config/swagger';
+import routes from './routes';
+// import { connectSocket } from './config/socket';
+// import errorHandler from './middleware/errorHandler';
 
-connectDB();
+// setup server
+const app = express();
+export const server = createServer(app);
+
+const env = process.env.NODE_ENV;
+const port = process.env.PORT || 8080;
+
+if (env !== 'test') {
+  connectDB();
+}
+
+// setup express
+configExpress(app);
+// Socket
+// connectSocket(server);
+// // routes
+routes(app);
+// // Swagger
+// // swaggerDocs(app, port as number);
+// // Error handler
+// app.use(errorHandler);
+
+export default app;

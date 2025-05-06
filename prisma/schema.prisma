@@ -20,8 +20,10 @@ datasource db {
 model User {
   id          String    @id @default(uuid())
   email       String    @unique
-  name        String?
+  firstName   String?
+  lastName    String?
   password    String
+  profileImageUrl  String?   @map("User_profile_url")
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @updatedAt @map("updated_at")
   products    Product[]
@@ -34,7 +36,7 @@ model Product {
   name        String
   description String?
   price       Float
-  imageUrl    String?   @map("image_url")
+  prductImageUrl    String?   @map("Product_image_url")
   createdAt   DateTime  @default(now()) @map("created_at")
   updatedAt   DateTime  @updatedAt @map("updated_at")
   userId      String    @map("user_id")

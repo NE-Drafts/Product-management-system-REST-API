@@ -6,4 +6,4 @@ const app = new express()
 app.listen()
 
 
-export
+export default app;

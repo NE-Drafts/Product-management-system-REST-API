@@ -20,8 +20,8 @@ datasource db {
 model User {
   id              String    @id @default(uuid())
   email           String    @unique
-  firstName       String?
-  lastName        String?
+  firstName       String?   @default("Default")
+  lastName        String?   @default("Default")
   password        String
   profileImageUrl String?   @map("User_profile_url")
   createdAt       DateTime  @default(now()) @map("created_at")
